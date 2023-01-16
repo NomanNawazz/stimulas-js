@@ -1,0 +1,24 @@
+<div data-controller="dropdown", data-dropdown-open-value = "true">
+    <h1 data-dropdown-target="dropdownHead">Home#index</h1>
+    <button data-action="mouseenter->dropdown#openToggle mouseleave->dropdown#openToggle">
+        open the toggle
+    </button>
+    <%# <button data-action="click -> dropdown#openDropdown", data-dropdown-target="openButton"> data </button>
+    <button data-action="click -> dropdown#closeDropdown", data-dropdown-target="closeButton"> data-hide </button> %>
+    <div data-dropdown-target="dropdownContent">
+        <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+    </div>
+</div>
+<div data-controller="dropdown">
+    <div data-dropdown-target="secondDropdown" >
+        <h1 data-dropdown-target="dropdownHead">Home#index</h1>
+        <button class="btn" data-action="click -> dropdown#openToggle">
+            click to open
+        </button>
+        <button data-action="click -> dropdown#openDropdown", data-dropdown-target="openButton"> data </button>
+        <button data-action="click -> dropdown#closeDropdown", data-dropdown-target="closeButton"> data-hide </button>
+        <div data-dropdown-target="dropdownContent">
+            <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        </div>
+    </div>
+</div>
