@@ -8,3 +8,22 @@
 
   <%= button_to "Destroy this movie", @movie, method: :delete %>
 </div>
+<h3>Comments</h3>
+
+<ul>
+  <% @movie.comments.each do |comment| %>
+    <li><%= comment.name %></li>
+  <% end %>
+</ul>
+
+<%= render 'comments/form', comment: Comment.new %>
+<script>
+debugger
+ App.cable.subscriptions.create({ channel: "MoviesChannel", id: "<%= @movie.id %>" }, {
+  received(comment) {
+    el = document.createElement('li');
+    el.innerHTML = comment;
+    document.querySelector('ul').appendChild(el)
+  }
+});
+</script>

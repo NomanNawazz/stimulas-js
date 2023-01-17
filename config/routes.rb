@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :comments
   resources :movies do
     collection do
       post :search
@@ -9,5 +10,5 @@ Rails.application.routes.draw do
       post :edit
     end
   end
-  root 'home#index'
+  root 'movies#index'
 end
